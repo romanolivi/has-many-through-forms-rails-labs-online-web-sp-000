@@ -1,1 +1,71 @@
+<%= form_for(@post) do |f| %> 
+    Title: <%= f.text_field :title %><br><br>
+    Content: <%= f.text_area :content %><br>
+    
+   Category: <%= f.collection_check_boxes :category_ids, Category.all, :id, :name %><br>
+
+    Create Category: 
+        <%= f.fields_for :categories, post.categories.build do |category| %>
+            <%= category.text_field :name %> 
+        <% end %>
+        <%= f.submit %> 
+    <% end %> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
